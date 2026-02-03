@@ -11,20 +11,27 @@ import java.io.IOException;
 public class Player extends Entity{
     GamePanel gp;
     KeyHandler keyH;
-    private int x;
-    private int y;;
-    private int speed;
+    public final int screenX;
+    public final int screenY;
+    private boolean collisionON;
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
         this.keyH = keyH;
+        screenX = gp.screenWidth/2 - (gp.tileSize/2);
+        screenY = gp.screenHeight/2- (gp.tileSize/2);
+        solidArea = new Rectangle();
         setDefaultValues();
         getPlayerImage();
     }
 
     public void setDefaultValues(){
-        x = 100;
-        y = 100;
+        worldX = gp.tileSize * 23;
+        worldY = gp.tileSize * 21;
+        solidArea.x =0;
+        solidArea.y =0;
+        solidArea.width = 32;
+        solidArea.height = 32;
         speed = 4;
         direction = "down";
     }
@@ -47,17 +54,19 @@ public class Player extends Entity{
 
             if (keyH.upPressed == true) {
                 direction = "up";
-                y -= speed;
+                worldY -= speed;
             } else if (keyH.downPressed == true) {
                 direction = "down";
-                y += speed;
+                worldY += speed;
             } else if (keyH.leftPressed == true) {
                 direction = "left";
-                x -= speed;
+                worldX -= speed;
             } else if (keyH.rightPressed == true) {
                 direction = "right";
-                x += speed;
+                worldX += speed;
             }
+            collisionON = false;
+            gp.cChecker.CheckTile(this);
 
             spriteCounter++;
             if (spriteCounter > 12) {
@@ -107,7 +116,7 @@ public class Player extends Entity{
                 }
                 break;
         }
-        g2.drawImage(image, x, y, gp.tileSize, gp.tileSize, null);
+        g2.drawImage(image, screenX, screenY, gp.tileSize, gp.tileSize, null);
     }
 
 }
