@@ -12,7 +12,7 @@ public class Entity {
     public int spriteCounter;
     public int spriteNum = 1;
     public Rectangle solidArea;
-    public boolean collision = false;
+    public boolean collisionON = false;
 
 
 }

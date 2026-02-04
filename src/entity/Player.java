@@ -13,7 +13,7 @@ public class Player extends Entity{
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
-    private boolean collisionON;
+
 
     public Player(GamePanel gp, KeyHandler keyH) {
         this.gp = gp;
@@ -28,10 +28,10 @@ public class Player extends Entity{
     public void setDefaultValues(){
         worldX = gp.tileSize * 23;
         worldY = gp.tileSize * 21;
-        solidArea.x =0;
-        solidArea.y =0;
-        solidArea.width = 32;
-        solidArea.height = 32;
+        solidArea.x =0 + (gp.tileSize/4);
+        solidArea.y =0 + (gp.tileSize/4);
+        solidArea.width = 20;
+        solidArea.height = 20;
         speed = 4;
         direction = "down";
     }
@@ -54,19 +54,37 @@ public class Player extends Entity{
 
             if (keyH.upPressed == true) {
                 direction = "up";
-                worldY -= speed;
+
             } else if (keyH.downPressed == true) {
                 direction = "down";
-                worldY += speed;
+
             } else if (keyH.leftPressed == true) {
                 direction = "left";
-                worldX -= speed;
+
             } else if (keyH.rightPressed == true) {
                 direction = "right";
-                worldX += speed;
+
             }
             collisionON = false;
             gp.cChecker.CheckTile(this);
+
+            if (collisionON == false){
+                switch (direction){
+                    case "up":
+                        worldY -= speed;
+                        break;
+                    case "down":
+                        worldY += speed;
+                        break;
+                    case "left":
+                        worldX -= speed;
+                        break;
+                    case "right":
+                        worldX += speed;
+                        break;
+                }
+
+            }
 
             spriteCounter++;
             if (spriteCounter > 12) {
