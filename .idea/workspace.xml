@@ -1,41 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a3db14bb-ec0c-4461-ae86-8e267499a28b" name="Changes" comment="collision detection">
-      <change afterPath="$PROJECT_DIR$/res/object/axe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/blueheart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/boots.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/chest (OLD).png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/chest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/chest_opened.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/coin_bronze.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/door.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/door_iron.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/heart_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/heart_full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/heart_half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/lantern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/manacrystal_blank.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/manacrystal_full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/pickaxe.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/potion_red.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/shield_blue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/shield_wood.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/sword_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/res/object/tent.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/AssetSetter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Chest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/OBJ_Key.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
+    <list default="true" id="a3db14bb-ec0c-4461-ae86-8e267499a28b" name="Changes" comment="showing objects">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Entity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/entity/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/CollisionChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/CollisionChecker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/GamePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/GamePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tile/TileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tile/TileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/OBJ_Door.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/OBJ_Door.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/object/SuperObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/object/SuperObject.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1770158029056</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="showing objects">
+      <created>1770238406973</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1770238406973</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -136,7 +115,8 @@
     <MESSAGE value="player and map setup" />
     <MESSAGE value="map navigating" />
     <MESSAGE value="collision detection" />
-    <option name="LAST_COMMIT_MESSAGE" value="collision detection" />
+    <MESSAGE value="showing objects" />
+    <option name="LAST_COMMIT_MESSAGE" value="showing objects" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

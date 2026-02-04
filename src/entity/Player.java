@@ -13,6 +13,7 @@ public class Player extends Entity{
     KeyHandler keyH;
     public final int screenX;
     public final int screenY;
+    int hasKey;
 
 
     public Player(GamePanel gp, KeyHandler keyH) {
@@ -30,6 +31,8 @@ public class Player extends Entity{
         worldY = gp.tileSize * 21;
         solidArea.x =0 + (gp.tileSize/4);
         solidArea.y =0 + (gp.tileSize/4);
+        solidAreaDefaultX = solidArea.x;
+        solidAreaDefaultY = solidArea.y;
         solidArea.width = 20;
         solidArea.height = 20;
         speed = 4;
@@ -65,8 +68,13 @@ public class Player extends Entity{
                 direction = "right";
 
             }
+//            Check tile collision
             collisionON = false;
             gp.cChecker.CheckTile(this);
+            //  Check object collision
+            int objIndex = gp.cChecker.checkObject(this, true);
+            pickUpObject(objIndex);
+
 
             if (collisionON == false){
                 switch (direction){
@@ -97,6 +105,25 @@ public class Player extends Entity{
             }
         }
 
+    }
+    public void pickUpObject(int i){
+        if (i != 999){
+            String objectName = gp.obj[i].name;
+            switch (objectName){
+                case "Key":
+                    hasKey++;
+                    gp.obj[i] = null;
+                    System.out.println("Key:"+ hasKey);
+                    break;
+                case "Door":
+                    if (hasKey>0) {
+                        gp.obj[i] = null;
+                        hasKey--;
+                    }
+                    System.out.println("Key:"+ hasKey);
+                    break;
+            }
+        }
     }
     public void draw(Graphics g2){
         BufferedImage image = null;
